@@ -1,0 +1,130 @@
+* {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas: 
+  "hd hd hd hd"
+  "si bo1 bo1 bo1"
+  "si bo1 bo1 bo1"
+  "si bo1 bo1 bo1"
+  "si bo1 bo1 bo1"
+  "si bo2 bo2 bo2"
+  "si bo2 bo2 bo2"
+  "si bo2 bo2 bo2"
+  "si bo2 bo2 bo2"
+  "ft ft ft ft"
+  ;
+  background-image: url(/image/pngtree-abstract-background-gaming-futuristic-banner-online-image_419160.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  grid-area: hd;
+  border: 1px solid rgb(252, 51, 255);
+}
+
+.side-bar {
+  grid-area: si;
+  border: 1px solid rgb(252, 51, 255);
+}
+
+.footer {
+  grid-area: ft;
+  border: 1px solid rgb(252, 51, 255);
+}
+
+.box-1 {
+  grid-area: bo1;
+  border: 1px solid rgb(252, 51, 255);
+  color: rgb(252, 51, 255);
+  columns: 2;
+}
+
+.box-2 {
+  grid-area: bo2;
+  border: 1px solid rgb(252, 51, 255);
+  color: rgb(252, 51, 255);
+  columns: 2;
+}
+
+.w-a-m-img {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  left: 100px;
+}
+
+.b-k-e-img {
+  width: 400px;
+  height: 300px;
+  position: relative;
+  left: 100px;
+}
+
+.w-a-m-btn {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+}
+
+.b-k-e-btn {
+  position: absolute;
+  top: 600px;
+  left: 150px;
+}
+
+.welcome-header{
+position: absolute;
+left: 45%;
+color: rgb(252, 51, 255);
+}
+
+.game-header-wam {
+text-align: center;
+}
+
+.game-header-bke {
+  text-align: center;
+}
+
+.side-bar {
+  color: rgb(252, 51, 255);
+}
+
+button {
+  color: rgb(252, 51, 255);
+  background-color: black;
+  width: 300px;
+  height: 150px;
+}
+
+/* sidebar */
+.side-bar-header {
+  text-align: center;
+}
+
+/* copyright */
+.copyright-name {
+  color: rgb(252, 51, 255);
+  text-align: center;
+}
+
+/* description games */
+.wam-lore {
+  position: relative;
+  top: 200px;
+  right: 100px;
+}
+
+.bke-lore {
+  position: relative;
+  top: 150px;
+  right: 100px;
+}

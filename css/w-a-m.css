@@ -1,0 +1,63 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/image/Mole-bk.png') no-repeat fixed;
+    background-size: cover;
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+}
+
+#game-container {
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+}
+
+h1 {
+    color: #333;
+}
+
+#moles-container {
+    position: relative;
+    margin-top: 20px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mole {
+    transition: transform 0.2s ease-in-out;
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    cursor: pointer;
+}
+
+.mole:hover {
+    transform: scale(1.2);
+}
+
+#score-value {
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #333333;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#start-button {
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack a Mole</title>
+    <link rel="stylesheet" href="/css/w-a-m.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <h1>Whack-a-Mole</h1>
+        <p id="score">Score: <span id="score-value">0</span></p>
+        <label for="player-name">Your Name:</label>
+        <input type="text" id="player-name" placeholder="Enter your name">
+        <button id="start-button" onclick="startGame()">Start Game</button>
+        <div id="moles-container"></div>
+        <img id="hammer" src="/img/hammer.png" style="display: none;" alt="hammer">
+        <div class="mole" onclick="whackMole(this)"></div>
+    </div>
+    <script src="/javascript/w-a-m.js"></script>
+</body>
+
+</html>
