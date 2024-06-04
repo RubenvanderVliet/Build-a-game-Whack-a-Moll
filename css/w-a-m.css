@@ -10,10 +10,10 @@ body {
 #game-container {
     text-align: center;
     margin: auto;
-    max-width: 600px;
+    width: 100%;
+    height: 100vh; /* Set the height to cover the entire viewport */
     background: url('../img/mole-bk.png') no-repeat center center fixed;
     background-size: cover;
-    min-height: 100vh;
 }
 
 h1 {
@@ -23,8 +23,8 @@ h1 {
 #moles-container {
     position: relative;
     margin-top: 20px;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: calc(100% - 60px); /* Adjusted to leave space for buttons and score */
 }
 
 .mole {
