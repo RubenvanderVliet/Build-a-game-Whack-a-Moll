@@ -3,51 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/page.css">
-    <link rel="stylesheet" href="css/b-k-e.css">
+    <title>Whack a Mole</title>
     <link rel="stylesheet" href="css/w-a-m.css">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="header">
-            <h2 class="welcome-header">Project build a game</h2>
-        </div>
-        <div class="box-1">
-            <h2 class="game-header-wam">Whack a mole</h2>
-            <img src="image/w-a-m.jpg  " alt="w-a-m" class="w-a-m-img">
-            <p class="wam-lore"> 
-                "Whack-a-Mole: Sla de ondeugende mollen zo snel mogelijk neer in dit razendsnelle spel. Test je
-                reflexen en behendigheid terwijl ze willekeurig tevoorschijn komen. Een verslavende uitdaging voor
-                gamers van alle niveaus!"
-            </p>
-        </div>
-        <div class="box-2">
-            <h2 class="game-header-bke">Boter kaas en eieren</h2>
-            <img src="image/b-k-e.png" alt="b-k-e" class="b-k-e-img">
-            <p class="bke-lore">
-                "Boter, Kaas en Eieren: Betreed het virtuele speelveld en daag je vrienden uit voor dit klassieke
-                strategische spel. Plaats slim je 'X' of 'O' op het bord en ga de strijd aan om als eerste een rij
-                te vormen. Eenvoudig te leren, maar moeilijk meester te worden. Een tijdloos spel voor snelle en
-                strategische denkers!"
-            </p>
-        </div>
-        <div class="side-bar">
-            <h2 class="side-bar-header">side-bar</h2>
-                <button class="w-a-m-btn">Whack a mole</button>
-                <br>
-                <button class="b-k-e-btn">Boter kaas en eieren</button>
-        </div>
-        <div class="footer">
-            <h2 class="copyright-name">&#169;Ayman Berkane</h2>
-            <h2 class="copyright-name">&#169;Ruben van der Vliet</h2>
-        </div>
+    <div id="game-container">
+        <h1>Whack-a-Mole</h1>
+        <p id="score">Score: <span id="score-value">0</span></p>
+        <label for="player-name">Your Name:</label>
+        <input type="text" id="player-name" placeholder="Enter your name">
+        <button id="start-button">Start Game</button>
+        <button id="reset-button">Reset Game</button>
+        <div id="moles-container"></div>
+        <img id="hammer" src="image/hammer.png" style="display: none;" alt="hammer">
+        <div class="cursor"></div>
     </div>
-    <script src="javascript/page.js"></script>
-    <script src="javascript/b-k-e.js"></script>
-    <script src="javascript/w-a-m.js"></script>
+    <script src="js/w-a-m.js"></script>
 </body>
 
 </html>

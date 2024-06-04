@@ -8,13 +8,13 @@
 
     // Afbeeldingen initialiseren
     const bodyImage = new Image();
-    bodyImage.src = '/image/bkbk.png';
+    bodyImage.src = 'image/mole-bk.png';
 
     molesContainer.style.backgroundImage = `url('${bodyImage.src}')`;
     molesContainer.style.backgroundSize = '100% 100%';
 
     const moleImage = new Image();
-    moleImage.src = '/image/mole.png';
+    moleImage.src = 'image/mole.png';
 
     let score = 0;
     let gameInterval;
@@ -79,8 +79,10 @@
 
         // Mol na 2 seconden verwijderen als niet geraakt
         setTimeout(() => {
-            molesContainer.removeChild(mole);
-            checkGameOutcome();
+            if (molesContainer.contains(mole)) {
+                molesContainer.removeChild(mole);
+                checkGameOutcome();
+            }
         }, 1250);
     }
 
