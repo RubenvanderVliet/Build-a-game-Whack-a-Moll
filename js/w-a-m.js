@@ -8,13 +8,13 @@
 
     // Afbeeldingen initialiseren
     const bodyImage = new Image();
-    bodyImage.src = 'image/mole-bk.png';
-
-    molesContainer.style.backgroundImage = `url('${bodyImage.src}')`;
-    molesContainer.style.backgroundSize = '100% 100%';
+    bodyImage.src = 'img/mole-bk.png';
+    bodyImage.onload = () => {
+        document.getElementById('game-container').style.backgroundImage = `url('${bodyImage.src}')`;
+    };
 
     const moleImage = new Image();
-    moleImage.src = 'image/mole.png';
+    moleImage.src = 'img/mole.png';
 
     let score = 0;
     let gameInterval;
@@ -26,7 +26,7 @@
     resetButton.addEventListener("click", resetGame);
 
     function startGame() {
-        resetGame(); 
+        resetGame();
 
         // Spelinterval starten
         gameInterval = setInterval(() => {
@@ -45,6 +45,7 @@
         // Reset variables
         score = 0;
         updateScore();
+        clearInterval(gameInterval);
     }
 
     function createMole() {
@@ -63,21 +64,13 @@
         // Mol aan willekeurige positie toevoegen
         molesContainer.appendChild(mole);
 
-        const molePositionRegions = [
-            { top: 0, bottom: 100 },
-            { top: 100, bottom: 200 }
-        ];
-
-        const randomRegionIndex = Math.floor(Math.random() * molePositionRegions.length);
-        const region = molePositionRegions[randomRegionIndex];
-
         const randomPositionX = getRandomPositionX();
-        const randomPositionY = getRandomPositionY(region.top, region.bottom);
+        const randomPositionY = getRandomPositionY();
 
         mole.style.left = `${randomPositionX}px`;
         mole.style.top = `${randomPositionY}px`;
 
-        // Mol na 2 seconden verwijderen als niet geraakt
+        // Mol na 1.25 seconden verwijderen als niet geraakt
         setTimeout(() => {
             if (molesContainer.contains(mole)) {
                 molesContainer.removeChild(mole);
@@ -91,9 +84,9 @@
         return Math.floor(Math.random() * (molesContainer.clientWidth - 100));
     }
 
-    function getRandomPositionY(top, bottom) {
-        // Willekeurige Y-positie binnen opgegeven bereik
-        return Math.floor(Math.random() * (bottom - top)) + top;
+    function getRandomPositionY() {
+        // Willekeurige Y-positie binnen het molesContainer
+        return Math.floor(Math.random() * (molesContainer.clientHeight - 100));
     }
 
     function hitMole(event) {

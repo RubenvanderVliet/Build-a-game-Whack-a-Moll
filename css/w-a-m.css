@@ -2,8 +2,6 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('image/mole-bk.png') no-repeat fixed;
-    background-size: cover;
     color: #ffffff;
     text-align: center;
     overflow: hidden;
@@ -13,6 +11,9 @@ body {
     text-align: center;
     margin: auto;
     max-width: 600px;
+    background: url('../img/mole-bk.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
 }
 
 h1 {
@@ -29,8 +30,8 @@ h1 {
 .mole {
     transition: transform 0.2s ease-in-out;
     position: absolute;
-    width: 350px;
-    height: 350px;
+    width: 100px;
+    height: 100px;
     cursor: pointer;
 }
 
@@ -66,10 +67,11 @@ h1 {
     position: absolute;
     width: 50px;
     height: 50px;
-    background: url('image/hammer.png') no-repeat center center;
+    background: url('../img/hammer.png') no-repeat center center;
     background-size: contain;
     pointer-events: none;
     transition: transform 0.1s ease-in-out;
+    z-index: 1000;
 }
 
 .cursor.active {
